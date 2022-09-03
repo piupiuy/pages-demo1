@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-container>
+      <el-header>用户管理</el-header>
+      <!-- 操作区域 -->
+      <el-main>
+       <keep-alive>
+        <MainPage></MainPage>
+       </keep-alive>
+      </el-main>
+    </el-container>
+    
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import MainPage from '@/pages/main/index.vue' 
 
 export default {
   name: 'App',
+  data(){
+    return{
+     
+    }
+  },
   components: {
-    HelloWorld
+    HelloWorld,
+    MainPage
+  },
+  methods:{
+    
   }
 }
 </script>
@@ -23,6 +41,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  // margin-top: 60px;
+  .el-header, .el-footer {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  // .el-main {
+  //   background-color: #E9EEF3;
+  //   color: #333;
+  //   text-align: center;
+  //   line-height: 160px;
+  // }
+  
 }
 </style>
